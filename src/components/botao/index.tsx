@@ -1,5 +1,7 @@
+import './style.scss'
+
 export default function Botao(){
     return(
-        <div>Botão</div>
+        <button className='botao'>Botão</button>
     )
 }
