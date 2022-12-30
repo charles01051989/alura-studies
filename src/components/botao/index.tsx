@@ -1,7 +1,11 @@
 import style from './Botao.module.scss'
 
-export default function Botao(){
+interface Itexto{
+    texto: string;
+}
+
+export default function Botao(props: Itexto){
     return(
-        <button className={style.botao}>Botão</button>
+        <button className={style.botao}>{props.texto}</button>
     )
 }
