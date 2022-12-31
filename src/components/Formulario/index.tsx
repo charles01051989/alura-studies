@@ -15,7 +15,7 @@ export default function Formulario() {
         />
       </div>
       <div className={style.inputContainer}>
-        <label htmlFor="tempo"></label>
+        <label htmlFor="tempo">Tempo</label>
         <input 
         type='time'
         step='1'
