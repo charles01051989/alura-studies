@@ -1,11 +1,18 @@
-import style from './Botao.module.scss'
+import React from 'react';
+import style from './Botao.module.scss';
 
-interface Itexto{
-    texto: string;
-}
-
-export default function Botao(props: Itexto){
-    return(
-        <button className={style.botao}>{props.texto}</button>
+class Botao extends React.Component<{
+  children: any,
+  type?: 'button' | 'submit' | 'reset' |
+undefined }>{
+  render() {
+    const { type = "button" } = this.props;
+    return (
+      <button type={type} className={style.botao}>
+        {this.props.children}
+      </button>
     )
+  }
 }
+
+export default Botao;

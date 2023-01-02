@@ -1,15 +1,12 @@
-import style from "./Item.module.scss";
+import { ITarefa } from '../../types/tarefa';
+import style from './Item.module.scss';
 
-export default function Item({ tarefa, tempo }: { tarefa: string, tempo: string }) {
- 
+export default function Item({ tarefa, tempo, selecionado, completado, id }: ITarefa) {
+  console.log('item atual: ', { tarefa, tempo, selecionado, completado, id })
   return (
-    <ul>
-      
-        <li  className={style.item}>
-          <h3>{tarefa}</h3>
-          <span>{tempo}</span>
-        </li>
-    
-    </ul>
-  );
+    <li className={style.item}>
+      <h3>{tarefa}</h3>
+      <span>{tempo}</span>
+    </li>
+  )
 }
